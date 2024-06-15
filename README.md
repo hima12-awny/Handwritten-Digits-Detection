@@ -26,7 +26,7 @@ Clone the repository and get ready to dive into digit detection magic. Simply in
 # 🔧 How It Works
 * Data: Uses the MNIST dataset, a large database of handwritten digits widely used for training various image processing systems.
 * Model: Implements a Convolutional Neural Network (CNN) to effectively classify digits.
-* Real-time Detection: The model can recognize digits from a live camera feed, showcasing its application potential in real-world scenarios.
+* Real-time Detection: The model can recognize digits from a live camera feed using OpenCv Lib in python, showcasing its application potential in real-world scenarios.
 
 # 📚 More About MNIST
 The MNIST database consists of 70,000 grayscale images of handwritten digits. Each image is 28x28 pixels, providing a balanced dataset for training and testing machine learning models.
