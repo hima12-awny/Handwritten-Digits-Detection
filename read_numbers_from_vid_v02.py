@@ -5,6 +5,12 @@ import numpy as np
 print(f'cv2 optimized: {cv.useOptimized()}')
 
 model = load_model('model_mnist_hrd 1.h5')
+
+# in case using ip Webcam(app) from your phone
+# ip = 'https://192.168.1.7:8080/video'
+# cap = cv.VideoCapture(ip)
+
+# normal webcam
 cap = cv.VideoCapture(0)
 
 def predict_number(img_):
@@ -42,8 +48,8 @@ while 1:
 
             if res is not None:
 
-                cv.rectangle(img, (x - p, y - p),      (x + w + p, y + h + p),  (255, 0, 0),  2)
-                cv.rectangle(img, (x - p, y - p - 15), (x + w + p, y - p),      (255, 0, 0), -1)
+                cv.rectangle(img, (x - p, y - p),      (x + w + p, y + h + p),       (255, 0, 0),  2)
+                cv.rectangle(img, (x - p, y - p - 15), (x + max(w + p, 100), y - p), (255, 0, 0), -1)
 
                 cv.putText(img,
                            f'{res[0]}, {res[1] * 100:.2f}%',
